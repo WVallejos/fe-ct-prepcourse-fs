@@ -26,15 +26,36 @@ function agregarPropiedad(objeto, propiedad) {
  var gato = {
     nombres: ['firu', 'koda'], 
     edad: 3,
-    meow: () => {
-       console.log( 'Meow!');
-    }
+    //meow: () => {
+    //   console.log( 'Meow!');
+    //}
  }
  //console.log(agregarPropiedad(auto, 'marca'));
  //invocarMetodo(gato, 'meow')
  //gato.meow();
- let autos = ['fiat'];
+ //let autos = ['fiat'];
  //autos.push('ford');
 //console.log(autos);
-gato.nombres.push('kali'); 
-console.log(gato.nombres.length);
+//gato.nombres.push('kali'); 
+//console.log(gato.nombres.length);
+let array = 'hola como estas'
+//for (let prop in gato) {
+  //  array = [prop, gato[prop]];
+//}
+let string = 'adsjfdsfsfjsdjfhacabcsbajda'
+let objetoString = {};
+let suma = 0;
+let stringOrdenado = string.split('').sort().join('');
+console.log(stringOrdenado);
+for (i=0; i < stringOrdenado.length; i++) {
+  if (objetoString.hasOwnProperty(stringOrdenado[i]) === false) {
+     for (j=0; j < stringOrdenado.length; j++) {
+        if (stringOrdenado[i] === stringOrdenado[j]) {
+           suma++;
+        }
+     }
+     objetoString[stringOrdenado[i]] = suma;
+     suma = 0; 
+  }
+}
+console.log(objetoString);
